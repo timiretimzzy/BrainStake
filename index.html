@@ -7,9 +7,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      --brainstake-green: #32a852; /* Adjusted from your logo */
+      --brainstake-green: #32a852;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out;
     }
   </style>
+  <link rel="icon" href="https://eschools.brainstake.tech/assets/img/brainstake.png" type="image/png">
 </head>
 <body class="bg-white font-sans text-gray-800">
 
@@ -18,36 +26,46 @@
     <div class="max-w-5xl mx-auto flex justify-center p-6">
       <img src="https://eschools.brainstake.tech/assets/img/brainstake.png" 
            alt="BrainStake Logo" 
-           class="h-16">
+           class="h-16 animate-fadeIn">
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="min-h-screen flex flex-col items-center justify-center text-center p-6 bg-gradient-to-b from-green-50 to-white">
-    <h1 class="text-3xl sm:text-4xl font-bold text-[var(--brainstake-green)] mb-6">
-      Get the BrainStake App
-    </h1>
-    <p class="text-gray-600 mb-8 max-w-md">
-      Access the BrainStake Parent Portal on your mobile device.
-    </p>
-    
-    <!-- Buttons -->
-    <div class="flex flex-col sm:flex-row gap-4">
-      <a href="https://play.google.com/store/apps/details?id=com.brainstake.app.prod" 
-         target="_blank"
-         class="px-6 py-3 bg-[var(--brainstake-green)] text-white rounded-lg shadow hover:bg-green-700 transition">
-        Get it on Google Play
-      </a>
-      <button disabled
-         class="px-6 py-3 bg-gray-400 text-white rounded-lg shadow cursor-not-allowed">
-        App Store – Coming Soon
-      </button>
+  <main class="min-h-screen flex flex-col items-center justify-center text-center p-6 bg-gradient-to-b from-green-50 via-white to-green-100">
+    <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full animate-fadeIn">
+      <h1 class="text-3xl sm:text-4xl font-bold text-[var(--brainstake-green)] mb-4">
+        Get the BrainStake App
+      </h1>
+      <p class="text-gray-600 text-lg mb-6">
+        Stay connected with your child's progress anytime, anywhere.
+      </p>
+
+      <!-- Buttons (Badges) -->
+      <div class="flex flex-col gap-4">
+        <!-- Google Play Badge -->
+        <a href="https://play.google.com/store/apps/details?id=com.brainstake.app.prod" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+               alt="Get it on Google Play" 
+               class="h-12 mx-auto hover:scale-105 transition">
+        </a>
+
+        <!-- App Store Coming Soon Badge -->
+        <div class="opacity-50 cursor-not-allowed">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+               alt="App Store – Coming Soon" 
+               class="h-12 mx-auto">
+          <p class="text-sm text-gray-500 mt-1">Coming Soon</p>
+        </div>
+      </div>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="bg-white border-t py-4 text-center text-gray-500 text-sm">
-    &copy; 2025 BrainStake Technologies. Dream, Believe & Build the Future.
+    <p>&copy; 2025 BrainStake Technologies. Dream, Believe & Build the Future.</p>
+    <a href="https://brainstake.tech/" target="_blank" class="text-[var(--brainstake-green)] hover:underline">
+      https://brainstake.tech/
+    </a>
   </footer>
 
 </body>
