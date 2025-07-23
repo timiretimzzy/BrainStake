@@ -63,12 +63,11 @@
     </div>
   </main>
 
-  <!-- Footer -->
- <p class="mb-2">&copy; <span id="year"></span> BrainStake Technologies. Dream, Believe & Build the Future.</p>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    <!-- Footer -->
+  <footer class="bg-white border-t py-6 text-center text-gray-600 text-sm">
+    <p class="mb-2">
+      &copy; <span id="year"></span> BrainStake Technologies. Dream, Believe & Build the Future.
+    </p>
 
     <!-- Contact Info -->
     <div class="mb-3 space-y-2">
@@ -89,8 +88,10 @@
       <p>
         <i class="bi bi-geo-alt text-[var(--brainstake-green)]"></i>
         <span class="font-semibold"> Locate Us:</span> 
-	<a href="https://www.google.com/maps/place/House/@-17.7719062,30.9905633,17z/data=!3m1!4b1!4m6!3m5!1s0x1931af0075387f1b:0x277c7c8cf777d860!8m2!3d-17.7719062!4d30.9905633!16s%2Fg%2F11wvbj_39q?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" class="hover:underline text-[var(--brainstake-green)]">
-        2761 Sable Way, BluffHill, Harare
+        <a href="https://www.google.com/maps/place/House/@-17.7719062,30.9905633,17z/data=!3m1!4b1!4m6!3m5!1s0x1931af0075387f1b:0x277c7c8cf777d860!8m2!3d-17.7719062!4d30.9905633!16s%2Fg%2F11wvbj_39q?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" 
+           target="_blank" class="hover:underline text-[var(--brainstake-green)]">
+          2761 Sable Way, BluffHill, Harare
+        </a>
       </p>
     </div>
 
@@ -100,6 +101,11 @@
       Visit Our Website
     </a>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 
 </body>
 </html>
