@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,98 +9,68 @@
   <style>
     :root {
       --brainstake-green: #32a852;
-      --dark-bg: #1D1D1F;
-      --dark-text: #f5f5f5;
     }
-
-    .dark body,
-    .dark header,
-    .dark footer {
-      background-color: var(--dark-bg) !important;
-      color: var(--dark-text);
-    }
-
-    .dark .text-gray-600,
-    .dark .text-gray-800 {
-      color: var(--dark-text) !important;
-    }
-
-    .dark a {
-      color: #86efac; /* lighter green for links in dark mode */
-    }
-
-    .dark .bg-white {
-      background-color: #2c2c30 !important;
-    }
-
-    .dark .border-t {
-      border-color: #444 !important;
-    }
-
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(10px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-
     .animate-fadeIn {
       animation: fadeIn 1s ease-out;
     }
   </style>
-
   <!-- Favicon -->
   <link rel="icon" href="https://eschools.brainstake.tech/assets/img/brainstake.png" type="image/png">
-  <!-- Bootstrap Icons -->
+  <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
-<body class="bg-white font-sans text-gray-800 transition-colors duration-300">
+<body class="bg-white font-sans text-gray-800">
 
   <!-- Header -->
-  <header class="bg-white shadow-md relative">
+  <header class="bg-white shadow-md">
     <div class="max-w-5xl mx-auto flex justify-center p-6">
       <img src="https://eschools.brainstake.tech/assets/img/brainstake.png" 
            alt="BrainStake Logo" 
            class="h-16 animate-fadeIn">
     </div>
-
-    <!-- Dark Mode Toggle -->
-    <div class="absolute top-4 right-4 flex items-center gap-2">
-      <label for="modeToggle" class="text-sm text-gray-600 dark:text-white">Dark Mode</label>
-      <input type="checkbox" id="modeToggle" class="accent-[var(--brainstake-green)]">
-    </div>
   </header>
 
   <!-- Main Content -->
-  <main class="min-h-screen flex flex-col items-center justify-center text-center p-6 bg-gradient-to-b from-green-50 via-white to-green-100 dark:from-[#2c2c30] dark:via-[#1d1d1f] dark:to-[#2c2c30]">
-    <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full animate-fadeIn dark:bg-[#2c2c30]">
+  <main class="min-h-screen flex flex-col items-center justify-center text-center p-6 bg-gradient-to-b from-green-50 via-white to-green-100">
+    <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full animate-fadeIn">
       <h1 class="text-3xl sm:text-4xl font-bold text-[var(--brainstake-green)] mb-4">
         Get the BrainStake App
       </h1>
-      <p class="text-gray-600 text-lg mb-6 dark:text-gray-300">
+      <p class="text-gray-600 text-lg mb-6">
         Stay connected with your child's progress anytime, anywhere.
       </p>
 
-      <!-- Buttons -->
+      <!-- Buttons (Badges) -->
       <div class="flex flex-col gap-4">
+        <!-- Google Play Badge -->
         <a href="https://play.google.com/store/apps/details?id=com.brainstake.app.prod" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
                alt="Get it on Google Play" 
                class="h-12 mx-auto hover:scale-105 transition">
         </a>
+
+        <!-- App Store Coming Soon Badge -->
         <div class="opacity-50 cursor-not-allowed">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
                alt="App Store – Coming Soon" 
                class="h-12 mx-auto">
-          <p class="text-sm text-gray-500 mt-1 dark:text-gray-400">Coming Soon</p>
+          <p class="text-sm text-gray-500 mt-1">Coming Soon</p>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-white border-t py-6 text-center text-gray-600 text-sm dark:bg-[#1d1d1f] dark:text-gray-300">
+    <!-- Footer -->
+  <footer class="bg-white border-t py-6 text-center text-gray-600 text-sm">
     <p class="mb-2">
       &copy; <span id="year"></span> BrainStake Technologies. Dream, Believe & Build the Future.
     </p>
+
+    <!-- Contact Info -->
     <div class="mb-3 space-y-2">
       <p>
         <i class="bi bi-telephone text-[var(--brainstake-green)]"></i>
@@ -118,27 +89,24 @@
       <p>
         <i class="bi bi-geo-alt text-[var(--brainstake-green)]"></i>
         <span class="font-semibold"> Locate Us:</span> 
-        <a href="https://www.google.com/maps/place/House/@-17.7719062,30.9905633,17z" 
+        <a href="https://www.google.com/maps/place/House/@-17.7719062,30.9905633,17z/data=!3m1!4b1!4m6!3m5!1s0x1931af0075387f1b:0x277c7c8cf777d860!8m2!3d-17.7719062!4d30.9905633!16s%2Fg%2F11wvbj_39q?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" 
            target="_blank" class="hover:underline text-[var(--brainstake-green)]">
           2761 Sable Way, BluffHill, Harare
         </a>
       </p>
     </div>
+
+    <!-- Website Button -->
     <a href="https://brainstake.tech/" target="_blank" 
        class="inline-block mt-2 px-4 py-2 bg-[var(--brainstake-green)] text-white rounded-lg shadow hover:bg-green-700 transition">
       Visit Our Website
     </a>
   </footer>
 
-  <!-- Year Script -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Toggle Dark Mode
-    const toggle = document.getElementById("modeToggle");
-    toggle.addEventListener("change", () => {
-      document.documentElement.classList.toggle("dark");
-    });
   </script>
+
+
 </body>
 </html>
